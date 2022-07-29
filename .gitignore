@@ -1,0 +1,8 @@
+# Ignore node modules
+node_modules/
+
+# Ignore output
+build/
+
+# Ignore configuration file
+config/config.json

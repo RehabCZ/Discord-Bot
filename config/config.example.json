@@ -1,0 +1,18 @@
+{
+    "database": {
+        "mongodb_host": "",
+        "mongodb_port": "",
+        "mongodb_name": ""
+    },
+    "dashboard": {
+        "dashboard_port": "",
+        "dashboard_secret": ""
+    },
+    "discord": {
+        "discord_token": "",
+        "discord_client": "",
+        "discord_guild": "",
+        "discord_secret": "",
+        "discord_callback": "http://localhost:3000/auth/discord/redirect"
+    }
+}
