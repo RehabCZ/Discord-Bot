@@ -1,4 +1,4 @@
-import DiscordClient from "@app-bot/client";
+import DiscordClient from "src/app/bot/client";
 import { ClientEvents } from "discord.js";
 
 interface Run {

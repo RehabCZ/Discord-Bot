@@ -1,1 +1,1 @@
-class ExceptionHandler {}
+export class ExceptionHandler {}

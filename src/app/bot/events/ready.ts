@@ -1,4 +1,4 @@
-import { Event } from "@app-bot/interfaces";
+import { Event } from "../interfaces";
 import { ApplicationCommandDataResolvable } from "discord.js";
 
 export const event: Event = {

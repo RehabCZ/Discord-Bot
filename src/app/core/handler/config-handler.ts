@@ -1,11 +1,7 @@
-import config from "@app-config/config.json";
-import {
-    ConfigDashboard,
-    ConfigDatabase,
-    ConfigDiscord,
-} from "@app-core/interfaces";
+import config from "../../../../config/config.json";
+import { ConfigDashboard, ConfigDatabase, ConfigDiscord } from "../interfaces";
 
-class ConfigHandler {
+export class ConfigHandler {
     private _databaseConfig: ConfigDatabase;
     private _dashboardConfig: ConfigDashboard;
     private _discordConfig: ConfigDiscord;
@@ -28,5 +24,3 @@ class ConfigHandler {
         return this._discordConfig;
     }
 }
-
-export default ConfigHandler;

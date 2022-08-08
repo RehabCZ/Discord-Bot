@@ -1,6 +1,6 @@
-import DiscordClient from "@app-bot/client";
-import { Event } from "@app-bot/interfaces";
-import { language } from "app/main";
+import DiscordClient from "../client";
+import { Event } from "../interfaces";
+import { language } from "../../main";
 import { CommandInteraction, PermissionResolvable } from "discord.js";
 
 export const event: Event = {

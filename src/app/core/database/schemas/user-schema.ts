@@ -1,4 +1,4 @@
-import User from "@app-core/interfaces";
+import { User } from "src/app/core/interfaces";
 import mongoose, { Schema } from "mongoose";
 
 const UserSchema = new Schema<User>({

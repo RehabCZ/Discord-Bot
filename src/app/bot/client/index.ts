@@ -1,7 +1,7 @@
 import { Client, Collection } from "discord.js";
 import { config, language } from "../../main";
-import { Command, Event } from "@app-bot/interfaces";
-import { ConfigDiscord } from "@app-core/interfaces";
+import { Command, Event } from "../interfaces";
+import { ConfigDiscord } from "../../core/interfaces";
 import {
     ButtonFactory,
     EmbedFactory,
@@ -9,10 +9,10 @@ import {
     ModalFactory,
     RowFactory,
     SelectFactory,
-} from "@app-bot/utils/factory";
-import getFiles from "@app-core/utils/file-loader";
+} from "../utils/factory";
+import getFiles from "../../core/utils/file-loader";
 import path from "path";
-import { Localization } from "@app-core/interfaces/localization";
+import { Localization } from "../../core/interfaces";
 
 class DiscordClient extends Client {
     private _commands: Collection<string, Command> = new Collection();
@@ -66,7 +66,9 @@ class DiscordClient extends Client {
             try {
                 this._events.set(event.name, event);
                 this.on(event.name, event.run.bind(null, this));
-                console.log(`loaded event: ${file.name}`);
+                console.log(
+                    `loaded event: ${file.name.replace(".ts" ?? ".js", "")}`
+                );
             } catch (err) {
                 console.error(err);
             }

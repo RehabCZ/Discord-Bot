@@ -1,5 +1,5 @@
-import { Event } from "@app-bot/interfaces";
-import getTextChannel from "@app-bot/utils/channel";
+import { Event } from "../../interfaces";
+import getTextChannel from "../../utils/channel";
 import { GuildMember } from "discord.js";
 
 export const event: Event = {

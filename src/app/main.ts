@@ -1,9 +1,9 @@
-import ConfigHandler from "@app-core/handler/config-handler";
+import { ConfigHandler } from "./core/handler";
 import { Intents } from "discord.js";
-import DiscordClient from "@app-bot/client";
-import { Localization } from "@app-core/interfaces/localization";
-import localization from "@app-config/localization.json";
-import Database from "@app-core/database";
+import DiscordClient from "./bot/client";
+import { Localization } from "./core/interfaces";
+import localization from "../../config/localization.json";
+import Database from "./core/database";
 
 export const language: Localization = localization;
 export const config = new ConfigHandler();

@@ -1,4 +1,4 @@
-import { Command } from "@app-bot/interfaces";
+import { Command } from "../interfaces";
 import { GuildMember } from "discord.js";
 
 export const command: Command = {

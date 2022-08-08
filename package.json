@@ -4,8 +4,8 @@
     "description": "Private DC Bot for my server",
     "main": "./src/app/main.ts",
     "scripts": {
-        "dev": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./src/app/main.ts",
-        "build": "tsc --outDir ./build/out --sourceMap true"
+        "start": "nodemon -e ts,js ./src/app/main.ts",
+        "build": "tsc --project tsconfig.json"
     },
     "keywords": [
         "DC",
@@ -35,7 +35,6 @@
         "@types/passport": "^1.0.8",
         "@types/passport-discord": "^0.1.5",
         "ts-node": "^10.8.0",
-        "tsconfig-paths": "^4.0.0",
         "typescript": "^4.7.4"
     }
 }
