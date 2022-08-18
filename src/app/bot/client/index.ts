@@ -1,5 +1,5 @@
 import { Client, Collection } from "discord.js";
-import { config, language } from "../../main";
+import { language } from "../../main";
 import { Command, Event } from "../interfaces";
 import { ConfigDiscord } from "../../core/interfaces";
 import {
@@ -13,11 +13,12 @@ import {
 import getFiles from "../../core/utils/file-loader";
 import path from "path";
 import { Localization } from "../../core/interfaces";
+import { Config } from "../../core/handler";
 
 class DiscordClient extends Client {
     private _commands: Collection<string, Command> = new Collection();
     private _events: Collection<string, Event> = new Collection();
-    private _config: ConfigDiscord = config.getDiscordConfig();
+    private _config: ConfigDiscord = Config.getDiscordConfig();
     private _language: Localization = language;
 
     // Components factories

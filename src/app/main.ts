@@ -1,14 +1,15 @@
-import { ConfigHandler } from "./core/handler";
 import { Intents } from "discord.js";
 import DiscordClient from "./bot/client";
 import { Localization } from "./core/interfaces";
 import localization from "../../config/localization.json";
 import Database from "./core/database";
+import Dashboard from "./web";
 
 export const language: Localization = localization;
-export const config = new ConfigHandler();
 
 new Database().init();
+
+new Dashboard().init();
 
 new DiscordClient({
     intents: [

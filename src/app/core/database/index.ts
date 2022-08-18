@@ -1,9 +1,9 @@
 import { ConfigDatabase } from "../interfaces";
 import mongoose, { ConnectOptions } from "mongoose";
-import { config } from "../../main";
+import { Config } from "../../core/handler";
 
 class Database {
-    private _config: ConfigDatabase = config.getDatabaseConfig();
+    private _config: ConfigDatabase = Config.getDatabaseConfig();
     private _mongoHost: string = this._config.mongodb_host;
     private _mongoPort: string = this._config.mongodb_port;
     private _mongoName: string = this._config.mongodb_name;
