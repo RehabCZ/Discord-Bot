@@ -7,7 +7,7 @@ import cors from "cors";
 import { ConfigDashboard, ConfigDatabase } from "../core/interfaces";
 import { Config } from "../core/handler";
 
-require("./strategies/DiscordStrategy");
+require("./strategies/discord");
 
 class Dashboard {
     private config_dashboard: ConfigDashboard = Config.getDashboardConfig();

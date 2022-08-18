@@ -4,8 +4,9 @@
     "description": "Private DC Bot for my server",
     "main": "./src/app/main.ts",
     "scripts": {
-        "start": "nodemon -e ts,js ./src/app/main.ts",
-        "build": "tsc --project tsconfig.json"
+        "dev": "nodemon -e ts,js ./src/app/main.ts",
+        "build": "tsc --project tsconfig.json",
+        "clean": "npx rimraf dist && npm cache clean -f"
     },
     "keywords": [
         "DC",
