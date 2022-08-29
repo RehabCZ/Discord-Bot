@@ -1,5 +1,5 @@
 import express, { Application } from "express";
-import router from "./routes/Router";
+import router from "./routes";
 import session from "express-session";
 import store from "connect-mongo";
 import passport from "passport";

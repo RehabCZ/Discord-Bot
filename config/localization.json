@@ -7,5 +7,6 @@
     "command_not_found": "<a:animated_crossmark:949367464830050344> Tento příkaz nebyl nalezen!",
     "bot_command_title": "**Kapitán Jake**",
     "bot_command_desc": "Hola hej Kapitáne! Já jsem pirát ze Země Nezemě! 🏴‍☠️\n \nJsem **Discord Bot** speciálně napsaný pro tenhle server.\nStvořili mne v NodeJS za pomoci TypeScriptu ❤️‍🔥, který mé zrození velmi ulehčil.\nMým tvůrcem je <@!300314017564721162> 🪓\n \n*Snad vám budu dobře sloužit vy suchzemské krysy!* 🐀",
-    "bot_command_clear": "<a:animated_checkmark:949367409679147029> Úspěšně jsem smazal **%amount%** zpráv z tohoto kanálu! 🗑️"
+    "bot_command_clear": "<a:animated_checkmark:949367409679147029> Úspěšně jsem smazal **%amount%** zpráv z tohoto kanálu! 🗑️",
+    "ticket_created": "<a:animated_checkmark:949367409679147029> Tvůj ticket byl úspěšně vytvořen!"
 }

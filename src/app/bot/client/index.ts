@@ -1,6 +1,6 @@
 import { Client, Collection } from "discord.js";
 import { language } from "../../main";
-import { Command, Event } from "../interfaces";
+import { Command, Event, Interval } from "../interfaces";
 import { ConfigDiscord } from "../../core/interfaces";
 import {
     ButtonFactory,
@@ -18,6 +18,7 @@ import { Config } from "../../core/handler";
 class DiscordClient extends Client {
     private _commands: Collection<string, Command> = new Collection();
     private _events: Collection<string, Event> = new Collection();
+    private _intervals: Collection<string, Interval> = new Collection();
     private _config: ConfigDiscord = Config.getDiscordConfig();
     private _language: Localization = language;
 
@@ -35,6 +36,7 @@ class DiscordClient extends Client {
             await this.login(this._config.discord_token);
             await this._loadCommands();
             await this._loadEvents();
+            await this._loadIntervals();
 
             console.log(language.bot_ready_event_message);
         } catch (err) {
@@ -70,6 +72,22 @@ class DiscordClient extends Client {
                 console.log(
                     `loaded event: ${file.name.replace(".ts" ?? ".js", "")}`
                 );
+            } catch (err) {
+                console.error(err);
+            }
+        }
+    }
+
+    private async _loadIntervals(): Promise<void> {
+        const intervalsPath = path.join(__dirname, "..", "intervals\\");
+
+        for await (const file of getFiles(intervalsPath)) {
+            const { interval } = await import(file.path);
+
+            try {
+                this._intervals.set(interval.name, interval);
+                setInterval(interval.run, interval.delay);
+                console.log(`loaded interval: ${interval.name}`);
             } catch (err) {
                 console.error(err);
             }

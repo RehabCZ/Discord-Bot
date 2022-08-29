@@ -8,4 +8,5 @@ export interface Localization {
     bot_command_title: string;
     bot_command_desc: string;
     bot_command_clear: string;
+    ticket_created: string;
 }
